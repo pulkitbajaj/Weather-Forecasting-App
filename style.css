@@ -60,3 +60,16 @@ body{
     float:left;
     margin: 0 0 0 13px;
 }
+.left{
+    background: linear-gradient(45deg, #00feba, #5b548a);
+    width: 500px;
+    height: 650px;
+    margin-left: 10px;
+    border-radius: 40px;
+    text-align: left;
+    margin-top: 57px;
+    position: relative;
+}
+.left p{
+    margin-left: 10px;
+}
