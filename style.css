@@ -1,3 +1,13 @@
+body{
+    background: radial-gradient(#d3d1db, #00feba);
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
 .card{
     background: linear-gradient(135deg, #00feba, #5b548a);
     width: 500px;
@@ -42,6 +52,8 @@
     height: 55px;
     cursor:pointer;
     margin-top: 35px;
-    
-    
+}
+
+.humidity{
+
 }
