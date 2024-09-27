@@ -12,7 +12,7 @@ body{
   background: linear-gradient(135deg, #00feba, #5b548a);
   width: 500px;
   height: 650px;
-  margin-left: 520px;
+  margin-left: 510px;
   border-radius: 40px;
   text-align: center;
   margin-top: 57px;
@@ -180,6 +180,7 @@ body{
   top:410px;
   right: 25px;
   box-shadow: 0 0 10px black;
+  text-align: center;
 }
 
 .right1, .right2 h1{
@@ -187,13 +188,24 @@ body{
   margin: 20px 0 0 0;
 }
 
-.recity{
-  background: linear-gradient(45deg, #00feba, #5b548a);
-  width: 100px;
+.recent{
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  width: 150px;
   height: 40px;
   border-radius: 40px;
-  position: absolute;
-  top:730px;
-  left: 325px;
   box-shadow: 0 0 10px black;
+  padding: 13px;
 }
+.recent button{
+  border-radius: 40px;
+  background-color: transparent;
+  height: 45px;
+  width: 135px;
+  border: 0px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+ .recity{
+  margin-top: -5px;
+ }
