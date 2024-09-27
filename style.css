@@ -12,7 +12,7 @@ body{
   background: linear-gradient(135deg, #00feba, #5b548a);
   width: 500px;
   height: 650px;
-  margin-left: 500px;
+  margin-left: 520px;
   border-radius: 40px;
   text-align: center;
   margin-top: 57px;
@@ -124,7 +124,8 @@ body{
   border-radius: 40px;
   position: absolute;
   top:12px;
-  left:0;
+  left:5px;
+  box-shadow: 0 0 10px black;
 }
 .left ul {
   list-style: none;
@@ -183,5 +184,16 @@ body{
 
 .right1, .right2 h1{
   text-align:center;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 0;
+}
+
+.recity{
+  background: linear-gradient(45deg, #00feba, #5b548a);
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  position: absolute;
+  top:730px;
+  left: 325px;
+  box-shadow: 0 0 10px black;
 }
