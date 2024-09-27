@@ -17,8 +17,15 @@ body{
   text-align: center;
   margin-top: 57px;
   box-shadow: 0 0 10px black;
-}
+  &:hover{
+    transform: scale(1.03);
+    transition: .9s;
+    cursor: pointer;
+}}
 
+.weather h1{
+  margin: 7px 0 42px 0; 
+}
 
 .search {
     margin:25px 0 20px 0;
@@ -76,9 +83,10 @@ body{
   }
   
   .wind p, .humidity p {
-    font-size: 30px;
-    margin: 0;
+    font-size: 24px;
+    margin: -6px 0 17px 0;
   }
+  
 .now {
     display: flex;
     flex-wrap: nowrap;
@@ -91,7 +99,7 @@ body{
   }
 .moon{
     float:left;
-    margin:0 0 0 20px;
+    margin:0 0 0 21px;
 }
 .moon img{
     height: 25px;
@@ -106,6 +114,10 @@ body{
     width: 25px;
 }
 
+.drizzle{
+  height: 25px;
+  width: 25px;
+} 
 .rainy img{
     height: 25px;
     width: 25px;
@@ -126,7 +138,11 @@ body{
   top:12px;
   left:5px;
   box-shadow: 0 0 10px black;
-}
+  &:hover{
+    transform: scale(1.03);
+    transition: .9s;
+    cursor: pointer;
+}}
 .left ul {
   list-style: none;
   padding: 0;
@@ -169,8 +185,12 @@ body{
   top:50px;
   right: 25px;
   box-shadow: 0 0 10px black;
-  
-}
+  &:hover{
+    transform: scale(1.03);
+    transition: .9s;
+    cursor: pointer;
+}}
+
 .right2{
   background: linear-gradient(45deg, #00feba, #5b548a);
   width: 450px;
@@ -181,7 +201,11 @@ body{
   right: 25px;
   box-shadow: 0 0 10px black;
   text-align: center;
-}
+  &:hover{
+    transform: scale(1.03);
+    transition: .9s;
+    cursor: pointer;
+}}
 
 .right1, .right2 h1{
   text-align:center;
@@ -205,7 +229,12 @@ body{
   font-size: 25px;
   color: white;
   cursor: pointer;
-}
+  &:hover{
+    transform: scale(1.2);
+    transition: .9s;
+    cursor: pointer;
+}}
+
  .recity{
   margin-top: -5px;
  }
