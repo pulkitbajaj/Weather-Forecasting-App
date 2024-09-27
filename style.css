@@ -18,57 +18,112 @@ body{
     margin-top: 57px;
 }
 
-.search{
-    display:inline-block;
-    align-items: center;
-    /* display:flex; */
-    /* justify-content:space-between; */
-
-}
-
-
-.search img{
-    border: 0px solid black;
-    border-radius: 50px;
-    /* padding: -2px; */
+.search {
+    margin:25px 0 20px 0;
+  }
+  
+  .search img {
+    border: 0;
+    border-radius: 50%;
     height: 20px;
     width: 20px;
-}
-.search input{
-    border: 0px solid black;
+    vertical-align: middle; /* align the image with the input field */
+  }
+  
+  .search input {
+    border: 0;
     border-radius: 40px;
-    box-shadow: 0 0 10px;
     padding: 20px;
-    height: 14px;
+    height: 40px;
     width: 275px;
-    margin-top:30px;
-}
-.search button{
-    display: inline-block;
-    border: 0px solid black;
-    box-shadow: 0 0 10px;
-    border-radius: 50px;
+    font-size: 16px;
+  }
+  
+  .search button {
+    border: 0;
+    border-radius: 50%;
     width: 55px;
     height: 55px;
-    cursor:pointer;
-    margin-top: 35px;
+    cursor: pointer;
+    background-color: #00feba;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px; /* add some space between the button and the input field */
+  }
+  
+  .wind-humidity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .humidity {
+    margin:0 20px 0 20px; /* add some space between the humidity and wind spans */
+  }
+  
+  .wind {
+    margin: 0 23px 0 0 ;
+    /* no need for margin-left: auto; */
+  }
+  
+  .wind img, .humidity img {
+    width: 41px;
+    height: 34px;
+    margin-right: 10px; /* add some space between the image and the text */
+  }
+  
+  .wind p, .humidity p {
+    font-size: 30px;
+    margin: 0;
+  }
+.now {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* or space-around, depending on your preference */
+    margin-top:18px;
+  }
+  
+  .now span {
+    margin-right: 20px; /* add some space between the elements */
+  }
+.moon{
+    float:left;
+    margin:0 0 0 20px;
+}
+.moon img{
+    height: 25px;
+    width: 25px;
 }
 
-.humidity img{
-    width:41px;
-    height:37px;
-    float:left;
-    margin: 0 0 0 13px;
+/* .cloudy-night{
+    margin:0 12px 0 0;
+} */
+.cloudy-night img{
+    height: 25px;
+    width: 25px;
+}
+
+.rainy img{
+    height: 25px;
+    width: 25px;
+
+}
+
+.clear img{
+    height: 25px;
+    width: 25px;
 }
 .left{
     background: linear-gradient(45deg, #00feba, #5b548a);
     width: 500px;
     height: 650px;
-    margin-left: 10px;
+    margin-left: -528px;
     border-radius: 40px;
     text-align: left;
     margin-top: 57px;
     position: relative;
+    /* left:0; */
 }
 .left p{
     margin-left: 10px;
