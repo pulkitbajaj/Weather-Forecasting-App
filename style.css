@@ -124,6 +124,32 @@ body{
   margin-top: 57px;
   position: relative;
 }
+.left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left img {
+  margin-left: 105px;
+}
+
+.left span {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 70px;
+}
+.left h2{
+  text-align: center;
+  font-size: 38px;
+
+}
 .left p{
-  margin-left: 10px;
+  font-size: 25px;
 }
