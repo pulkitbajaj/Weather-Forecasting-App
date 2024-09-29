@@ -18,7 +18,7 @@ body{
   margin: 57px 0 0  510px;
   border-radius: 40px;
   text-align: center;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 20px black;
   &:hover{
     transform: scale(1.03);
     transition: .9s;
@@ -62,9 +62,6 @@ body{
   .wind-humidity {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
   }
  
   
@@ -84,12 +81,11 @@ body{
   
   .wind p, .humidity p {
     font-size: 24px;
-    margin: -35px -22px 17px 0;
+    margin: -33px -22px 17px 0;
   }
   
 .now {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between; 
     margin-top:18px;
   }
@@ -103,7 +99,6 @@ body{
   width:25px;
 }
 .moon{
-    float:left;
     margin:0 0 0 21px;
 }
 
