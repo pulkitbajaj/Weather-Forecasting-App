@@ -147,10 +147,6 @@ body{
   margin-left:20px;
 }
 
-.small{
-  font-size: smaller;
-}
-
 .right1,.right2{
   background: linear-gradient(45deg, #00feba, #5b548a);
   width: 450px;
@@ -176,6 +172,10 @@ body{
   margin: 20px 0 0 0;
 }
 
+.recity{
+  margin-top: -5px;
+ }
+
 .recent{
   background: linear-gradient(135deg, #00feba, #5b548a);
   width: 150px;
@@ -199,11 +199,3 @@ body{
     transition: .9s;
     cursor: pointer;
 }}
-
- .recity{
-  margin-top: -5px;
- }
-
- 
-
-
