@@ -1,5 +1,5 @@
 body{
-    background: radial-gradient(#d3d1db, #00feba);
+    background: radial-gradient(#606060,rgb(122, 175, 255),#373737);
     color:white;
 
 }
@@ -12,7 +12,7 @@ body{
 
 .card{
   
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  background: linear-gradient(135deg, #000000, #5b548a);
   width: 500px;
   height: 650px;
   margin: 57px 0 0  510px;
@@ -104,7 +104,7 @@ body{
 
 
 .left{
-  background: linear-gradient(45deg, #00feba, #5b548a);
+  background: linear-gradient(45deg, #000000, #5b548a);
   width: 476px;
   height: 646px;
   margin: 57px 0 0 10px;
@@ -125,7 +125,7 @@ body{
 }
 
 .left li {
-  display: flex;
+  display: flex;.                                                      
   align-items: center;
   margin-bottom: 10px;
   line-height: 15px;
@@ -134,7 +134,7 @@ body{
 .left span {
   font-size: 25px;
   font-weight: bold;
-  margin-left: 63px;
+  margin: 19px 0 0 63px;
   
 }
 .left h2{
@@ -148,7 +148,7 @@ body{
 }
 
 .right1,.right2{
-  background: linear-gradient(45deg, #00feba, #5b548a);
+  background: linear-gradient(45deg, #000000, #7a6fc3);
   width: 450px;
   height: 300px;
   border-radius: 40px;
@@ -177,7 +177,7 @@ body{
  }
 
 .recent{
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  background: linear-gradient(135deg, #000000, #5b548a);
   width: 150px;
   height: 40px;
   border-radius: 40px;
