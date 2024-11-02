@@ -1,123 +1,132 @@
-body{
-    background: radial-gradient(#606060,rgb(122, 175, 255),#373737);
-    color:white;
-
+body {
+  background-image: url(blue2.jpg);
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-  }
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-.card{
-  
-  background: linear-gradient(135deg, #000000, #5b548a);
-  width: 500px;
+.card {
+
+  background: rgba(255, 135, 221, 0.2);
+  width: 475px;
   height: 650px;
-  margin: 57px 0 0  510px;
+  margin: 57px 10px 0 510px;
   border-radius: 40px;
   text-align: center;
   box-shadow: 0 0 20px black;
-  &:hover{
+
+  &:hover {
     transform: scale(1.03);
     transition: .9s;
     cursor: pointer;
-}}
+  }
+}
 
 .search {
-    margin:25px 0 20px 0;
-  }
-  
-  .search img {
-    height: 20px;
-    width: 20px;
-    vertical-align: middle; 
-  }
-  
-  .search input {
-    border: 0;
-    border-radius: 40px;
-    padding: 20px;
-    height: 20px;
-    width: 300px;
-    font-size: 16px;
-  }
-  
-  .search button {
-    border: 0;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    background-color: #00feba;
-    margin-left: 10px;
-  }
-
-.weather h1{
-  margin: 7px 0 42px 0; 
+  margin: 25px 0 20px 0;
 }
 
-  
-  .wind-humidity {
-    display: flex;
-    flex-direction: row;
-  }
- 
-  
-  .humidity {
-    margin:0 20px 0 20px; 
-  }
-  
-  .wind {
-    margin: 0 23px 0 0 ;
-  }
-  
-  .wind img, .humidity img {
-    width: 41px;
-    height: 34px;
-    margin-right: 175px; 
-  }
-  
-  .wind p, .humidity p {
-    font-size: 24px;
-    margin: -33px -22px 17px 0;
-  }
-  
+.search img {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.search input {
+  border: 0;
+  border-radius: 40px;
+  padding: 20px;
+  height: 20px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search button {
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #00feba;
+  margin-left: 10px;
+}
+
+.weather h1 {
+  margin: 7px 0 42px 0;
+}
+
+
+.wind-humidity {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.humidity {
+  margin: 0 20px 0 20px;
+}
+
+.wind {
+  margin: 0 23px 0 0;
+}
+
+.wind img,
+.humidity img {
+  width: 41px;
+  height: 34px;
+  margin-right: 175px;
+}
+
+.wind p,
+.humidity p {
+  font-size: 24px;
+  margin: -33px -22px 17px 0;
+}
+
 .now {
-    display: flex;
-    justify-content: space-between; 
-    margin-top:18px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
 .now span {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
-.now img{
-  height:25px;
-  width:25px;
+.now img {
+  height: 25px;
+  width: 25px;
 }
-.moon{
-    margin:0 0 0 21px;
+
+.moon {
+  margin: 0 0 0 21px;
 }
 
 
-.left{
-  background: linear-gradient(45deg, #000000, #5b548a);
-  width: 476px;
+.left {
+  background: rgba(255, 135, 221, 0.2);
+  width: 450px;
   height: 646px;
-  margin: 57px 0 0 10px;
+  margin: 57px 0 0 30px;
   border-radius: 40px;
   position: absolute;
-  top:12px;
-  left:5px;
+  top: 12px;
+  left: 5px;
   box-shadow: 0 0 10px black;
-  &:hover{
+
+  &:hover {
     transform: scale(1.03);
     transition: .9s;
     cursor: pointer;
-}}
+  }
+}
+
 .left ul {
   list-style: none;
   padding: 0;
@@ -125,7 +134,7 @@ body{
 }
 
 .left li {
-  display: flex;.                                                      
+  display: flex;
   align-items: center;
   margin-bottom: 10px;
   line-height: 15px;
@@ -134,68 +143,94 @@ body{
 .left span {
   font-size: 25px;
   font-weight: bold;
-  margin: 19px 0 0 63px;
-  
+  margin: 19px 0 0 40px;
 }
-.left h2{
+
+.left h2 {
   text-align: center;
   font-size: 38px;
 
 }
-.left p{
+
+.left p {
   font-size: 25px;
-  margin-left:20px;
+  margin-left: 20px;
 }
 
-.right1,.right2{
-  background: linear-gradient(45deg, #000000, #7a6fc3);
-  width: 450px;
-  height: 300px;
+.right {
+  background: rgba(255, 135, 221, 0.2);
+  width: 447px;
+  height: 646px;
   border-radius: 40px;
   position: absolute;
-  top:50px;
+  top: 50px;
   right: 25px;
   box-shadow: 0 0 10px black;
-  &:hover{
+
+  &:hover {
     transform: scale(1.03);
     transition: .9s;
     cursor: pointer;
-}}
+  }
+}
 
-.right2{
-  top:410px;
+
+.right,
+h1 {
   text-align: center;
-}
-
-.right1, .right2 h1{
-  text-align:center;
   margin: 20px 0 0 0;
+  font-size: 38px;
 }
 
-.recity{
-  margin-top: -5px;
- }
+.right ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
 
-.recent{
-  background: linear-gradient(135deg, #000000, #5b548a);
+.right li{
+  display: flex;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
+}
+
+.lefty{
+  font-size: 32px;
+  font-weight: bold;
+  margin: 13px 0 0 50px;
+}
+
+.righty{
+  font-size: 32px;
+}
+
+.recity {
+  margin-top: -5px;
+}
+
+.recent {
+  background: rgba(255, 135, 221, 0.295);
   width: 150px;
   height: 40px;
   border-radius: 40px;
   box-shadow: 0 0 10px black;
   padding: 13px;
 }
-.recent button{
-  font-family:cursive;
+
+.recent button {
+  font-family: cursive;
   border-radius: 40px;
   background-color: transparent;
   height: 45px;
   width: 135px;
   border: 0px;
   font-size: 25px;
-  color: white;
+  color: black;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     transform: scale(1.2);
     transition: .9s;
     cursor: pointer;
-}}
+  }
+}
