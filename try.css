@@ -2,32 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-    background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 100%);
+    background-image: url(Images/blue2.jpg);
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     padding: 20px;
-}
+    
+  }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    justify-content: space-between;
+
 }
 
 
 
 .sidebar {
+    height: 477px;
     position: fixed;
     left: 20px;
-    top: 310px;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
+    top: 115px;
+    background: rgba(255, 135, 221, 0.2);
     padding: 15px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    box-shadow: 0 0 20px black;
+    &:hover {
+        transform: scale(1.03);
+        transition: .9s;
+        cursor: pointer;
+      }
 }
 
 .sidebar button {
@@ -36,7 +47,7 @@ body {
     height: 40px;
     margin: 30px 0;
     border: none;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgb(255, 255, 255);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -54,12 +65,21 @@ body {
 }
 
 .weather-card {
-    background: rgba(255, 255, 255, 0.2);
+    
+    font-size: 26px;
+    background: rgba(255, 135, 221, 0.2);
     padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    width: 400px;
+    border-radius: 40px;
+    height: 560px;
+    width: 410px;
     margin-top: -3px;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+    &:hover {
+        transform: scale(1.03);
+        transition: .9s;
+        cursor: pointer;
+      }
 }
 
 .search-bar {
@@ -83,7 +103,11 @@ body {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    line-height: 37px;
+    line-height: 44px;
+}
+
+.forecast-item span{
+    margin-right: 15px;
 }
 
 .current-weather {

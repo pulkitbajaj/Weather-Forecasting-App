@@ -1,144 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="try.css" >
-    <title>Weather Dashboard</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <button title="Refresh"><img src="Icons/refresh.png" alt="refresh" ></button>
-        <button title="Conversion">
-          <img src="Icons/convesion.png" alt="" >
-        </button>
-        <a href="map.html">
-          <button title="Map"><img src="Icons/map.png" alt="map"></button>
-        </a>
-        <a href = "setting.html">
-          <button title="Settings"><img src="Icons/setting.png" alt="" ></button>
-        </a>
 
-        <button title="Notifications">
-          <img src="Icons/notification.png" alt="" >
-        </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="try.css">
+  <link rel="icon" type="image/x-icon" href="Icons/logo2.svg">
+  <title>Weather Dashboard</title>
+</head>
 
-        <a href="aboutUs.html">
-          <button title="About Us"><img src="Icons/aboutus.png" alt="" ></button>
-        </a>
-        
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <button title="Refresh"><img src="Icons/refresh.png" alt="refresh"></button>
+      <button title="Conversion">
+        <img src="Icons/convesion.png" alt="">
+      </button>
+      <a href="map.html">
+        <button title="Map"><img src="Icons/map.png" alt="map"></button>
+      </a>
+      <a href="setting.html">
+        <button title="Settings"><img src="Icons/setting.png" alt="settings"></button>
+      </a>
+      <button title="Notifications">
+        <img src="Icons/notification.png" alt="notification">
+      </button>
+      <a href="aboutUs.html">
+        <button title="About Us"><img src="Icons/aboutus.png" alt="about us"></button>
+      </a>
+    </div>
+
+    <div class="main-content">
+      <div class="weather-card">
+        <h2><b>Weekly Forecast</b></h2>
+        <br>
+        <ul class="forecast-list">
+          <li class="forecast-item">
+            <span>30/9 Today</span>
+            <span>⛅ 24/30</span>
+          </li>
+          <li class="forecast-item">
+            <span>1/10 Tomorrow</span>
+            <span>⛅ 22/33</span>
+          </li>
+          <li class="forecast-item">
+            <span>2/10 Wednesday</span>
+            <span>⛅ 23/35</span>
+          </li>
+          <li class="forecast-item">
+            <span>3/10 Thursday</span>
+            <span>☀️ 24/39</span>
+          </li>
+          <li class="forecast-item">
+            <span>4/10 Friday</span>
+            <span>⛅ 20/29</span>
+          </li>
+          <li class="forecast-item">
+            <span>5/10 Saturday</span>
+            <span>⛅ 21/32</span>
+          </li>
+          <li class="forecast-item">
+            <span>6/10 Sunday</span>
+            <span>⛅ 22/33</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="main-content">
-        <div class="weather-card">
-          <h2>Weekly Forecast</h2>
-          <ul class="forecast-list">
-            <li class="forecast-item">
-              <span>30/9 Today</span>
-              <span>⛅ 24/30</span>
-            </li>
-            <li class="forecast-item">
-              <span>1/10 Tomorrow</span>
-              <span>⛅ 22/33</span>
-            </li>
-            <li class="forecast-item">
-              <span>2/10 Wednesday</span>
-              <span>⛅ 23/35</span>
-            </li>
-            <li class="forecast-item">
-              <span>3/10 Thursday</span>
-              <span>☀️ 24/39</span>
-            </li>
-            <li class="forecast-item">
-              <span>4/10 Friday</span>
-              <span>⛅ 20/29</span>
-            </li>
-            <li class="forecast-item">
-              <span>5/10 Saturday</span>
-              <span>⛅ 21/32</span>
-            </li>
-            <li class="forecast-item">
-              <span>6/10 Sunday</span>
-              <span>⛅ 22/33</span>
-            </li>
-          </ul>
+      <div class="weather-card">
+        <div class="search-bar">
+          <input type="text" placeholder="Enter City Name">
         </div>
-
-        <div class="weather-card">
-          <div class="search-bar">
-            <input type="text" placeholder="Enter City Name" >
-          </div>
-          <div class="current-weather">
-            <h2>22°C Bangalore</h2>
-            <img src="Images/clouds.png" alt="Weather Image" >
-            <div class="weather-details">
-              <div>
-                <p>Humidity: 60%</p>
-              </div>
-              <div>
-                <p>Wind: 20km/hr</p>
-              </div>
+        <div class="current-weather">
+          <h2>22°C Bangalore</h2>
+          <img src="Images/clouds.png" alt="Weather Image">
+          <div class="weather-details">
+            <div>
+              <p>Humidity: 60%</p>
             </div>
-            <div class="hourly-forecast">
-              <div class="hour-item">
-                <div>30°</div>
-                <div>🌙</div>
-                <div>Now</div>
-              </div>
-              <div class="hour-item">
-                <div>28°</div>
-                <div>🌑</div>
-                <div>1 A.M.</div>
-              </div>
-              <div class="hour-item">
-                <div>22°</div>
-                <div>🌧</div>
-                <div>3 A.M.</div>
-              </div>
-              <div class="hour-item">
-                <div>25°</div>
-                <div>☀️</div>
-                <div>5 A.M.</div>
-              </div>
-              <div class="hour-item">
-                <div>27°</div>
-                <div>⛅</div>
-                <div>7 A.M.</div>
-              </div>
+            <div>
+              <p>Wind: 20km/hr</p>
             </div>
           </div>
-        </div>
-
-        <div class="weather-card">
-          <h2>Additional Info</h2>
-          <div class="info-list">
-            <div class="forecast-item">
-              <span>Air Quality</span>
-              <span>Good</span>
+          <div class="hourly-forecast">
+            <div class="hour-item">
+              <div>30°</div>
+              <div>🌙</div>
+              <div>Now</div>
             </div>
-            <div class="forecast-item">
-              <span>UV Index</span>
-              <span>Medium</span>
+            <div class="hour-item">
+              <div>28°</div>
+              <div>🌑</div>
+              <div>1 A.M.</div>
             </div>
-            <div class="forecast-item">
-              <span>Visibility</span>
-              <span>Clear</span>
+            <div class="hour-item">
+              <div>22°</div>
+              <div>🌧</div>
+              <div>3 A.M.</div>
+            </div>
+            <div class="hour-item">
+              <div>25°</div>
+              <div>☀️</div>
+              <div>5 A.M.</div>
+            </div>
+            <div class="hour-item">
+              <div>27°</div>
+              <div>⛅</div>
+              <div>7 A.M.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="recent">Recent Places</div>
-      <div class="recent-places">
-        <div class="place-chip">Rajpura</div>
-        <div class="place-chip">Sangrur</div>
-        <div class="place-chip">Chandigarh</div>
-        <div class="place-chip">Amritsar</div>
-        <div class="place-chip">Patiala</div>
-        <div class="place-chip">Jalandhar</div>
-        <div class="place-chip">New York</div>
+      <div class="weather-card">
+        <h2>Additional Info</h2>
+        <div class="info-list">
+          <div class="forecast-item">
+            <span>Air Quality</span>
+            <span>Good</span>
+          </div>
+          <div class="forecast-item">
+            <span>UV Index</span>
+            <span>Medium</span>
+          </div>
+          <div class="forecast-item">
+            <span>Visibility</span>
+            <span>Clear</span>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+
+    <div id="recent">Recent Places</div>
+    <div class="recent-places">
+      <div class="place-chip">Rajpura</div>
+      <div class="place-chip">Sangrur</div>
+      <div class="place-chip">Chandigarh</div>
+      <div class="place-chip">Amritsar</div>
+      <div class="place-chip">Patiala</div>
+      <div class="place-chip">Jalandhar</div>
+      <div class="place-chip">New York</div>
+    </div>
+  </div>
+</body>
+
 </html>
