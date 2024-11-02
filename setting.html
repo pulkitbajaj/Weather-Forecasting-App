@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "setting.css">
+    <title>Settings</title>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+          <h3>Temperature Units</h3>
+          <div class="input-field">
+            <label for="temperature-unit">Celsius (°C)</label>
+            <select id="temperature-unit">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h3>Notifications</h3>
+          <div class="notification-settings">
+            <div class="notification-item">
+              <label for="daily-forecast">Daily Forecast</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="daily-forecast" checked>
+                <label for="daily-forecast"></label>
+              </div>
+            </div>
+            <div class="notification-item">
+              <label for="severe-weather">Severe Weather Alerts</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="severe-weather">
+                <label for="severe-weather"></label>
+              </div>
+            </div>
+            <div class="notification-item">
+              <label for="precipitation">Precipitation Warnings</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="precipitation" checked>
+                <label for="precipitation"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h3>Locations</h3>
+          <div class="location-settings">
+            <div class="location-item">
+              <div class="location-name">
+                <input type="text" value="Current Location">
+                <span class="default-label">Default</span>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-name">
+                <input type="text" value="New York, NY">
+                <button class="set-default">Set Default</button>
+              </div>
+              <button class="remove-location">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <button class="add-location">
+              <i class="fas fa-plus"></i> Add Location
+            </button>
+          </div>
+        </div>
+       </div>
+</body>
+</html>
