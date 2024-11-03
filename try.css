@@ -12,25 +12,23 @@ body {
     background-size: cover;
     min-height: 100vh;
     padding: 20px;
-    
+    overflow: hidden;
   }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 65px auto 0 auto;
     position: relative;
     justify-content: space-between;
 
 }
 
-
-
 .sidebar {
     height: 477px;
     position: fixed;
     left: 22px;
-    top: 115px;
-    background: rgba(255, 135, 221, 0.2);
+    top: 125px;
+    background: rgba(255, 135, 255, 0.251);
     padding: 15px;
     border-radius: 28px;
     box-shadow: 0 0 20px black;
@@ -51,6 +49,10 @@ body {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 5px rgb(94, 94, 94);
+    &:hover{
+        background-color: rgb(231, 231, 231);
+        transition: 0.3s;
+    }
 }
 
 .sidebar button img{
@@ -66,7 +68,6 @@ body {
 }
 
 .weather-card {
-    
     font-size: 26px;
     background: rgba(135, 249, 255, 0.2);
     padding: 20px;
@@ -120,7 +121,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     line-height: 44px;
 }
 
@@ -150,36 +150,34 @@ body {
     font-size: 17px;
 }
 
-.recent-places {
+.recent{
+    margin: 35px -55px 10px 0;
     display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    margin-top: 35px;
+    justify-content: space-between;
+    font-size: 26px;
+    gap:  30px;
+    flex-wrap: wrap;
 }
 
-.place-chip {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 15px;
-    border-radius: 20px;
-    white-space: nowrap;
-    cursor: pointer;
-    height: auto;
-    width: 178px;
+.cities{
+    background-color: rgba(255, 135, 255, 0.251);
+    width: 135px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 40px;
     text-align: center;
+    box-shadow: 0 0 10px black;
 }
 
-#recent{
-    
-    background: rgb(142 42 42 / 20%);
-    padding: 8px 15px;
-    border-radius: 20px;
-    white-space: nowrap;
+.cities button{
+    font-size: 26px;
+    background: transparent;
+    border: 0px;
     cursor: pointer;
-    height: auto;
-    width: 178px;
-    text-align: center;
-    margin: 23px 0 0 532px;
-
+    &:hover{
+        transform: scale(1.15);
+        transition: 0.9s;
+    }
 }
 
 @media (max-width: 968px) {
