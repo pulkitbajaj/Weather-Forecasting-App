@@ -21,20 +21,13 @@
     align-items: center;
     justify-content: space-between;
   }
-  
-  .about-us-image {
-    flex-basis: 50%;
-  }
-  
+
   .about-us-image img {
-    width: 100%;
-    height: auto;
+    width: 428px;
+    height: 351px;
     border-radius: 8px;
-  }
-  
-  .about-us-info {
-    flex-basis: 45%;
-  }
+    margin: 0 37px 0 0;
+ }
   
   .about-us-subtitle {
     font-size: 24px;
@@ -55,7 +48,6 @@
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
   }
   
   .about-us-link:hover {

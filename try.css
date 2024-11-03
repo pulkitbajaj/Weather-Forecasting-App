@@ -7,19 +7,15 @@
 
 body {
     background-image: url(Images/blue2.jpg);
-    color: black;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden;
   }
 
 .container {
     max-width: 1200px;
     margin: 65px auto 0 auto;
-    position: relative;
-    justify-content: space-between;
 
 }
 
@@ -27,7 +23,7 @@ body {
     height: 477px;
     position: fixed;
     left: 22px;
-    top: 125px;
+    top: 95px;
     background: rgba(255, 135, 255, 0.251);
     padding: 15px;
     border-radius: 28px;
@@ -64,7 +60,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
-    margin: 55px 0 0 -20px;
+    margin: -28px 0 0 -20px;
 }
 
 .weather-card {
@@ -180,9 +176,23 @@ body {
     }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1457px) {
     .main-content {
         grid-template-columns: 1fr 1fr;
+    }
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: -37px;
+        transform: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        border-radius: 15px 15px 0 0;
+        width: 100vw;
+        height: 86px;
     }
 }
 
@@ -190,20 +200,24 @@ body {
     .main-content {
         grid-template-columns: 1fr;
         margin-left: 0;
-    }
 
+    }
     .sidebar {
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-        top: auto;
+        top: -6px;
         transform: none;
         display: flex;
         justify-content: space-around;
         padding: 10px;
         border-radius: 15px 15px 0 0;
+        width: 100vw;
+        height:54px;
     }
+
+    
 
     .sidebar button {
         margin: 0;
