@@ -12,6 +12,10 @@ const weekly5 = document.querySelector(".weekly5");
 const weekly6 = document.querySelector(".weekly6");
 const weekly7 = document.querySelector(".weekly7");
 const now = document.querySelector(".now");
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
+const three = document.querySelector(".three");
+const four = document.querySelector(".four");
 
 
 async function getData(cityName) {
@@ -34,5 +38,9 @@ btn.addEventListener("click", async () => {
     weekly7.innerText = `${Math.round(result.current.temp_c+1.1)}°C / ${Math.round(result.current.temp_c+8.2)}°C`
 
     now.innerText =`${Math.round(result.current.temp_c)}°C`
+    one.innerText =`${Math.round(result.current.temp_c-1)}°C`
+    two.innerText =`${Math.round(result.current.temp_c-3)}°C`
+    three.innerText =`${Math.round(result.current.temp_c-5)}°C`
+    four.innerText =`${Math.round(result.current.temp_c-8)}°C`
 
 });
