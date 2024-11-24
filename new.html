@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="try.css">
+  <link rel="icon" type="image/x-icon" href="Icons/logo2.svg">
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <button title="Refresh" onclick="fetchWeatherData()">
+        <img src="Icons/refresh.png" alt="refresh">
+      </button>
+      <button title="Conversion">
+        <img src="Icons/convesion.png" alt="conversion">
+      </button>
+      <a href="map.html">
+        <button title="Map"><img src="Icons/map.png" alt="map"></button>
+      </a>
+      <a href="setting.html">
+        <button title="Settings"><img src="Icons/setting.png" alt="settings"></button>
+      </a>
+      <button title="Notifications">
+        <img src="Icons/notification.png" alt="notification">
+      </button>
+      <a href="aboutUs.html">
+        <button title="About Us"><img src="Icons/aboutus.png" alt="about us"></button>
+      </a>
+    </div>
+
+    <div class="main-content">
+      <div class="weather-card">
+        <h2><b>Weekly Forecast</b></h2>
+        <ul id="forecast-list" class="forecast-list">
+          <!-- Dynamic weather data will be inserted here -->
+        </ul>
+      </div>
+
+      <div class="weather-card">
+        <div class="search-bar">
+          <input id="city-input" type="text" placeholder="Enter city" />
+          <button type="button" onclick="fetchWeatherData()">
+            <img src="Images/search.png" alt="search">
+          </button>
+        </div>
+        <div id="current-weather" class="current-weather">
+          <img src="Images/clouds.png" alt="Weather Image">
+          <h2>Loading...</h2>
+          <div class="weather-details">
+            <div>
+              <p>Humidity: --</p>
+            </div>
+            <div>
+              <p>Wind: --</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-card">
+        <h2>Additional Info</h2>
+        <div id="additional-info" class="info-list">
+          <!-- Additional weather data will be inserted here -->
+          <div class="hour-item">
+            <div>30°</div>
+            <div>🌙</div>
+            <div>Now</div>
+          </div>
+          <div class="hour-item">
+            <div>28°</div>
+            <div>🌑</div>
+            <div>1 A.M.</div>
+          </div>
+          <div class="hour-item">
+            <div>22°</div>
+            <div>🌧</div>
+            <div>3 A.M.</div>
+          </div>
+          <div class="hour-item">
+            <div>25°</div>
+            <div>☀️</div>
+            <div>5 A.M.</div>
+          </div>
+          <div class="hour-item">
+            <div>27°</div>
+            <div>⛅</div>
+            <div>7 A.M.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recent">
+      <b>Recent Cities &ensp;:</b>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Rajpura')">Rajpura</button></span>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Amritsar')">Amritsar</button></span>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Surat')">Surat</button></span>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Ambala')">Ambala</button></span>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Patiala')">Patiala</button></span>
+      <span class="cities"><button type="button" onclick="fetchWeatherData('Sangrur')">Sangrur</button></span>
+    </div>
+  </div>
+
+  <script>
+    const API_KEY = '51ebc20289msh70b6fe9f5555adfp196b93jsn22fa3f5c185e';
+    const API_HOST = 'ai-weather-by-meteosource.p.rapidapi.com';
+
+    async function fetchWeatherData(city = 'Bangalore') {
+      const cityInput = document.getElementById('city-input');
+      if (cityInput && cityInput.value) {
+        city = cityInput.value;
+      }
+
+      const url = `https://${API_HOST}/forecast/daily?place_id=${city}&units=metric`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': API_KEY,
+          'x-rapidapi-host': API_HOST,
+        },
+      };
+
+      try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        updateWeatherForecast(data);
+        updateCurrentWeather(data);
+        updateAdditionalInfo(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+        alert('Could not fetch weather data. Please try again.');
+      }
+    }
+
+    function updateWeatherForecast(data) {
+      const forecastList = document.getElementById('forecast-list');
+      forecastList.innerHTML = ''; // Clear existing content
+
+      if (data && data.daily) {
+        data.daily.forEach((day) => {
+          const listItem = document.createElement('li');
+          listItem.classList.add('forecast-item');
+          listItem.innerHTML = `
+            <span>${day.date}</span>
+            <span>${day.temperature.min}°C - ${day.temperature.max}°C</span>`;
+          forecastList.appendChild(listItem);
+        });
+      }
+    }
+
+    function updateCurrentWeather(data) {
+      const currentWeather = document.getElementById('current-weather');
+      if (data && data.current) {
+        currentWeather.innerHTML = `
+          <img src="Images/clouds.png" alt="Weather Image">
+          <h2>${data.current.temperature}°C, ${data.place_name}</h2>
+          <div class="weather-details">
+            <div><p>Humidity: ${data.current.humidity}%</p></div>
+            <div><p>Wind: ${data.current.wind_speed} km/h</p></div>
+          </div>`;
+      }
+    }
+
+    function updateAdditionalInfo(data) {
+      const additionalInfo = document.getElementById('additional-info');
+      additionalInfo.innerHTML = ''; // Clear existing content
+
+      if (data && data.current) {
+        additionalInfo.innerHTML = `
+          <div class="forecast-item">
+            <span><b>Air Quality</b></span>
+            <span>${data.current.air_quality || 'N/A'}</span>
+          </div>
+          <div class="forecast-item">
+            <span><b>UV Index</b></span>
+            <span>${data.current.uv_index || 'N/A'}</span>
+          </div>`;
+      }
+    }
+
+    // Initialize with default city
+    fetchWeatherData();
+  </script>
+</body>
+
+</html>
