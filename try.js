@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const result = await getData(value);
         if (!result) return;
-
+        console.log(result)
         updateWeatherData(result);
     });
 
@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update weather data in the UI
     function updateWeatherData(result) {
         a = result.location.name;
+        const currentTempC = result.current.temp_c;
         cityTemp.innerText = `${result.current.temp_c}°C  ${result.location.name}`;
         weekly[0].innerText = `${Math.round(result.current.temp_c + 1)} / ${Math.round(result.current.temp_c + 7)}°C`;
         weekly[1].innerText = `${Math.round(result.current.temp_c - 1.3)} / ${Math.round(result.current.temp_c + 6.8)}°C`;
@@ -138,13 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
         weekly[4].innerText = `${Math.round(result.current.temp_c - 3.5)} / ${Math.round(result.current.temp_c + 5.8)}°C`;
         weekly[5].innerText = `${Math.round(result.current.temp_c - 4.2)} / ${Math.round(result.current.temp_c + 6.3)}°C`;
         weekly[6].innerText = `${Math.round(result.current.temp_c - 3.1)} / ${Math.round(result.current.temp_c + 5.2)}°C`;
-
+    
         now.innerText = `${Math.round(result.current.temp_c)}°C`;
         one.innerText = `${Math.round(result.current.temp_c - 1)}°C`;
         two.innerText = `${Math.round(result.current.temp_c - 3)}°C`;
         three.innerText = `${Math.round(result.current.temp_c - 5)}°C`;
         four.innerText = `${Math.round(result.current.temp_c - 8)}°C`;
-
+    
         uv.innerText = `${result.current.uv}`;
         feels.innerText = `${result.current.feelslike_c}°C`;
         pressure.innerText = `${result.current.pressure_mb} hPa`;
@@ -154,7 +155,24 @@ document.addEventListener("DOMContentLoaded", () => {
         precip.innerText = `${result.current.precip_mm} mm`;
         dt.innerText = `${result.location.localtime}`;
         wind_dir.innerText = `${result.current.wind_dir}`;
-
+    
+        
+        // Set the background or image based on temperature
+    const weatherImage = document.querySelector(".current-weather img"); // Ensure this selector matches your HTML
+    console.log(currentTempC)
+    if (currentTempC <= 0) {
+        weatherImage.src = "Images/snow.png"; // Cold temperature
+    } else if (currentTempC > 0 && currentTempC <= 10) {
+        weatherImage.src = "Images/fog.png "; // Cool temperature
+    } else if (currentTempC > 10 && currentTempC <= 23) {
+        weatherImage.src = "Images/clouds.png"; // Mild temperature
+    } else if (currentTempC > 23) {
+        weatherImage.src = "Images/clear.png"; // Warm temperature
+    } else {
+        weatherImage.src = "Images/clouds.png"; // Default image for unhandled conditions
+    }
         isCelsius = true; // Reset to Celsius mode
     }
+    
+ 
 });
